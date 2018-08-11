@@ -1,0 +1,17 @@
+'''
+对于单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符
+ord('A')=65;ord('Z')=90;ord('a')=97;ord('z')=122
+'''
+def haxi(string):
+	dic={}
+	for i in range(65,123):
+		dic[chr(i)]=0
+	for i in range(len(string)):
+		dic[string[i]]+=1
+	result={}
+	for key,value in dic.items():
+		if value>0:
+			result[key]=value 
+	return result
+haxi('asssssdfg')
+	
